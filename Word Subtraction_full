@@ -1,0 +1,47 @@
+using System;
+using System.Linq;
+using System.Collections.Generic;
+
+
+namespace FizzBuzz
+
+{
+    //Word Subtraction 
+    //Create a program that takes two strings/words.Then then converts this to an ASCII value and subtracts the values from each other.
+    // if the words are the same
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+
+
+            string input1 = Console.ReadLine();
+            string input2 = Console.ReadLine();
+
+            List<char> symbolCollection1 = new List<char>();
+            List<char> symbolCollection2 = new List<char>();
+            List<int> result = new List<int>();
+
+            for (int i = 0; i < input1.Length; i++)
+            {
+                symbolCollection1.Add(input1[i]);
+            }
+
+            for (int i = 0; i < input2.Length; i++)
+            {
+                symbolCollection2.Add(input2[i]);
+            }
+
+
+            for (int i = 0; i < symbolCollection1.Count; i++)
+            {
+                result.Add((int)symbolCollection1[i] - (int)symbolCollection2[i]);
+            }
+
+            Console.WriteLine(String.Join(", ", result));
+            
+
+        }
+    }
+
+}
